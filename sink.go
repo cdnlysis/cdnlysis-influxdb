@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/meson10/cdnlysis"
-	"github.com/meson10/cdnlysis_engine/client"
+	"github.com/cdnlysis/cdnlysis"
+	"github.com/cdnlysis/cdnlysis_engine/client"
 )
 
 var cachedInfluxConn *client.Client

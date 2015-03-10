@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/meson10/cdnlysis"
+	"github.com/cdnlysis/cdnlysis"
 )
 
 var wg sync.WaitGroup

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/meson10/cdnlysis_engine/client"
+	"github.com/cdnlysis/cdnlysis_engine/client"
 	"gopkg.in/yaml.v2"
 )
 
