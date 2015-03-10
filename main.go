@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/cdnlysis/cdnlysis"
+	"gopkg.in/cdnlysis/cdnlysis.v1"
 )
 
 var wg sync.WaitGroup

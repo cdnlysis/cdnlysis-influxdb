@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/cdnlysis/cdnlysis_engine/client"
+	"github.com/cdnlysis/cdnlysis_influxdb/client"
 	"gopkg.in/yaml.v2"
 )
 

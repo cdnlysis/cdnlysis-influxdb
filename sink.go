@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/cdnlysis/cdnlysis"
-	"github.com/cdnlysis/cdnlysis_engine/client"
+	"github.com/cdnlysis/cdnlysis_influxdb/client"
+	"gopkg.in/cdnlysis/cdnlysis.v1"
 )
 
 var cachedInfluxConn *client.Client
