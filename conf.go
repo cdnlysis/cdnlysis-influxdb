@@ -1,9 +1,10 @@
 package main
 
 import (
-	"flag"
 	"io/ioutil"
 	"log"
+
+	"gopkg.in/cdnlysis/cdnlysis.v1/conf"
 
 	"github.com/cdnlysis/cdnlysis_influxdb/client"
 	"gopkg.in/yaml.v2"
@@ -24,15 +25,6 @@ influx:
     database: cdnlogs
 `
 
-func cliArgs() string {
-	confFlag := flag.Lookup("config")
-	if confFlag == nil || len(confFlag.Value.String()) == 0 {
-		return ""
-	}
-
-	return confFlag.Value.String()
-}
-
 var Settings InfluxConfig
 
 func GetConfig() InfluxConfig {
@@ -41,12 +33,11 @@ func GetConfig() InfluxConfig {
 	}
 
 	//Try to look for a module level cached value
-	var path string = cliArgs()
+	var path string = conf.CliArgs()
 
 	conf := InfluxConfig{}
 	err := yaml.Unmarshal([]byte(baseConfig), &conf)
 	if err != nil {
-		log.Println(baseConfig)
 		log.Println("1", err)
 	}
 
@@ -58,7 +49,6 @@ func GetConfig() InfluxConfig {
 		}
 	}
 
-	//Set the module level cached value.
 	Settings = conf
 	return Settings
 }
