@@ -43,5 +43,5 @@ func main() {
 	log.Println("Waiting for done!!")
 	wg.Wait()
 
-	os.Exit(10)
+	os.Exit(0)
 }
