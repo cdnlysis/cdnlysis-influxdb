@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 	"sync"
 
 	"gopkg.in/cdnlysis/cdnlysis.v1"
@@ -41,4 +42,6 @@ func main() {
 
 	log.Println("Waiting for done!!")
 	wg.Wait()
+
+	os.Exit(10)
 }
